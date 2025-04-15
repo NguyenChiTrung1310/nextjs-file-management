@@ -6,6 +6,10 @@
     @apply flex items-center justify-center;
   }
 
+  .container {
+    @apply mx-auto max-w-7xl px-5;
+  }
+
   h1 {
     @apply text-5xl;
   }
@@ -20,5 +24,36 @@
   }
   h5 {
     @apply text-xl;
+  }
+  .subtitle-1 {
+    @apply text-[16px] leading-[24px] font-medium;
+  }
+  .subtitle-2 {
+    @apply text-[14px] leading-[20px] font-semibold;
+  }
+  .body-1 {
+    @apply text-[16px] leading-[24px] font-normal;
+  }
+  .body-2 {
+    @apply text-[14px] leading-[20px] font-normal;
+  }
+  .button {
+    @apply text-[14px] leading-[20px] font-medium;
+  }
+  .caption {
+    @apply text-[12px] leading-[16px] font-normal;
+  }
+  .overline {
+    @apply text-[10px] leading-[14px] font-normal;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border scroll-smooth;
+  }
+
+  body {
+    @apply text-dark-200 min-h-screen bg-white;
   }
 }
