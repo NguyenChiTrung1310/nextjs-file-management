@@ -56,79 +56,69 @@ export default {
       animation: {
         'caret-blink': 'caret-blink 1.25s ease-out infinite',
       },
+      fontSize: {
+        '5xl': ['34px', {lineHeight: '42px', fontWeight: 700}],
+        '4xl': ['24px', {lineHeight: '36px', fontWeight: 700}],
+        '3xl': ['20px', {lineHeight: '28px', fontWeight: 700}],
+        '2xl': ['18px', {lineHeight: '20px', fontWeight: 700}],
+        xl: ['16px', {lineHeight: '24px', fontWeight: 700}],
+        base: ['16px', {lineHeight: '24px', fontWeight: 400}],
+      },
     },
   },
   plugins: [
     require('tailwindcss-animate'),
-    plugin(function ({addBase, theme, addComponents}) {
-      addComponents({
-        '.flex-between': {
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        },
-        '.flex-center': {
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-        },
-        '.absolute-center': {
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-        },
-      })
-      addBase({
-        h1: {
-          fontSize: theme('fontSize.5xl'),
-          lineHeight: theme('lineHeight.5xl'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-        h2: {
-          fontSize: theme('fontSize.4xl'),
-          lineHeight: theme('lineHeight.4xl'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-          // '@screen tablet_max': {
-          //   fontSize: theme('fontSize.3xl'),
-          //   lineHeight: theme('lineHeight.3xl'),
-          //   fontStyle: theme('fontStyle.normal'),
-          // fontWeight: 600
-          // },
-        },
-        h3: {
-          fontSize: theme('fontSize.3xl'),
-          lineHeight: theme('lineHeight.3xl'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-        h4: {
-          fontSize: theme('fontSize.2xl'),
-          lineHeight: theme('lineHeight.2xl'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-        h5: {
-          fontSize: theme('fontSize.xl'),
-          lineHeight: theme('lineHeight.xl'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-        h6: {
-          fontSize: theme('fontSize.lg'),
-          lineHeight: theme('lineHeight.lg'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-        p: {
-          fontSize: theme('fontSize.base'),
-          lineHeight: theme('lineHeight.base'),
-          fontStyle: theme('fontStyle.normal'),
-          fontWeight: 600,
-        },
-      })
-    }),
+    // plugin(function ({addBase, theme}) {
+    //   addBase({
+    //     h1: {
+    //       fontSize: theme('fontSize.5xl'),
+    //       lineHeight: theme('lineHeight.5xl'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //     h2: {
+    //       fontSize: theme('fontSize.4xl'),
+    //       lineHeight: theme('lineHeight.4xl'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //       // '@screen tablet_max': {
+    //       //   fontSize: theme('fontSize.3xl'),
+    //       //   lineHeight: theme('lineHeight.3xl'),
+    //       //   fontStyle: theme('fontStyle.normal'),
+    //       // fontWeight: 600
+    //       // },
+    //     },
+    //     h3: {
+    //       fontSize: theme('fontSize.3xl'),
+    //       lineHeight: theme('lineHeight.3xl'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //     h4: {
+    //       fontSize: theme('fontSize.2xl'),
+    //       lineHeight: theme('lineHeight.2xl'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //     h5: {
+    //       fontSize: theme('fontSize.xl'),
+    //       lineHeight: theme('lineHeight.xl'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //     h6: {
+    //       fontSize: theme('fontSize.lg'),
+    //       lineHeight: theme('lineHeight.lg'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //     p: {
+    //       fontSize: theme('fontSize.base'),
+    //       lineHeight: theme('lineHeight.base'),
+    //       fontStyle: theme('fontStyle.normal'),
+    //       fontWeight: 600,
+    //     },
+    //   })
+    // }),
   ],
 }
