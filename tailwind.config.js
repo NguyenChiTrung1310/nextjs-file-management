@@ -43,11 +43,6 @@ export default {
         'drop-3': '0 8px 30px 0 rgba(65, 89, 214, 0.1)',
         1: '0px 0px 20px 0px rgba(66, 71, 97, 0.2)',
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
-      },
       keyframes: {
         'caret-blink': {
           '0%,70%,100%': {opacity: '1'},
