@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import plugin from 'tailwindcss/plugin'
 
 export default {
   darkMode: ['class'],
@@ -40,6 +41,7 @@ export default {
         'drop-1': '0px 10px 30px 0px rgba(66, 71, 97, 0.1)',
         'drop-2': '0 8px 30px 0 rgba(65, 89, 214, 0.3)',
         'drop-3': '0 8px 30px 0 rgba(65, 89, 214, 0.1)',
+        1: '0px 0px 20px 0px rgba(66, 71, 97, 0.2)',
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -65,5 +67,27 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    plugin(function ({addComponents}) {
+      addComponents({
+        '.flex-between': {
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        },
+        '.flex-center': {
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        },
+        '.absolute-center': {
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+        },
+      })
+    }),
+  ],
 }
