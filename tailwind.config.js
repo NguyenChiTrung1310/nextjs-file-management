@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import plugin from 'tailwindcss/plugin'
 
 export default {
   darkMode: ['class'],
@@ -66,59 +65,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-animate'),
-    // plugin(function ({addBase, theme}) {
-    //   addBase({
-    //     h1: {
-    //       fontSize: theme('fontSize.5xl'),
-    //       lineHeight: theme('lineHeight.5xl'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //     h2: {
-    //       fontSize: theme('fontSize.4xl'),
-    //       lineHeight: theme('lineHeight.4xl'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //       // '@screen tablet_max': {
-    //       //   fontSize: theme('fontSize.3xl'),
-    //       //   lineHeight: theme('lineHeight.3xl'),
-    //       //   fontStyle: theme('fontStyle.normal'),
-    //       // fontWeight: 600
-    //       // },
-    //     },
-    //     h3: {
-    //       fontSize: theme('fontSize.3xl'),
-    //       lineHeight: theme('lineHeight.3xl'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //     h4: {
-    //       fontSize: theme('fontSize.2xl'),
-    //       lineHeight: theme('lineHeight.2xl'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //     h5: {
-    //       fontSize: theme('fontSize.xl'),
-    //       lineHeight: theme('lineHeight.xl'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //     h6: {
-    //       fontSize: theme('fontSize.lg'),
-    //       lineHeight: theme('lineHeight.lg'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //     p: {
-    //       fontSize: theme('fontSize.base'),
-    //       lineHeight: theme('lineHeight.base'),
-    //       fontStyle: theme('fontStyle.normal'),
-    //       fontWeight: 600,
-    //     },
-    //   })
-    // }),
-  ],
+  plugins: [require('tailwindcss-animate')],
 }
