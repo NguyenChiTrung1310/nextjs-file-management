@@ -5,7 +5,7 @@ import React from 'react'
 import {useForm} from 'react-hook-form'
 import {z} from 'zod'
 
-import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form'
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form'
 import {Input} from '@/components/ui/input'
 import {formSchema} from '@/modules/auth/auth.resolver'
 
@@ -24,7 +24,7 @@ const AuthForm: React.FC<Props> = ({type}) => {
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+    console.log('values', values)
   }
 
   return (
