@@ -9,7 +9,7 @@ import {z} from 'zod'
 
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form'
 import {Input} from '@/components/ui/input'
-import {formSchema} from '@/modules/auth/auth.resolver'
+import {formSignInSchema, formSignUpSchema} from '@/modules/auth/auth.resolver'
 import {ROUTES} from '@/routes'
 
 import {Button} from './ui/button'
@@ -19,6 +19,7 @@ interface Props {
 }
 
 const AuthForm: React.FC<Props> = ({type}) => {
+  const formSchema = type === 'sign-in' ? formSignInSchema : formSignUpSchema
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -67,6 +68,23 @@ const AuthForm: React.FC<Props> = ({type}) => {
               )}
             />
           </>
+        )}
+
+        {type === 'sign-in' && (
+          <FormField
+            control={form.control}
+            name='email'
+            render={({field}) => (
+              <FormItem className='shadow-drop-1 gap-1 rounded-xl bg-white p-4 pb-2 font-light'>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder='Enter your email' variant='secondary' {...field} className='h-6' />
+                </FormControl>
+
+                <FormMessage />
+              </FormItem>
+            )}
+          />
         )}
         <Button type='submit' className='w-full'>
           {type === 'sign-in' ? 'Sign In' : 'Sign Up'}
